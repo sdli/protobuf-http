@@ -1,0 +1,25 @@
+syntax = "proto3";
+package teacher;
+
+message CourseQueryReq
+{
+}
+
+message CourseQueryResp
+{
+	int32 Result = 1;
+	string ErrMsg = 2;
+	repeated Course CourseList = 3;  
+}
+
+message VerifyCodeReq
+{
+	string Phone = 1;
+	int32 Type = 2; 
+}
+
+message VerifyCodeResp
+{
+	int32 Result = 1;
+	string ErrMsg = 2;
+}
